@@ -1,0 +1,437 @@
+      /* Apply Inter font globally */
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #0f172a; /* slate-900 */
+        color: #e2e8f0; /* slate-200 */
+      }
+
+      /* Animated Gradient Background for Hero Section */
+      .hero-gradient-bg {
+        background: linear-gradient(-45deg, #3701cb, #560059, #a3537e, #f59e0b);
+        background-size: 400% 400%;
+        animation: gradientBG 20s ease infinite;
+        position: relative;
+        overflow: hidden; /* To contain pseudo-elements if added */
+      }
+
+      @keyframes gradientBG {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      .hero-gradient-bg::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: linear-gradient(
+            rgba(255, 255, 255, 0.03) 1px,
+            transparent 1px
+          ),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        background-size: 20px 20px;
+        opacity: 0.5;
+        z-index: 0;
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 1;
+      }
+
+      .text-gradient-rose-gold {
+        background: linear-gradient(to right, #fde68a, #fecaca, #f9a8d4);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+      }
+
+      .btn-primary {
+        background-color: #d67a93;
+        color: white;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(214, 122, 147, 0.3);
+      }
+      .btn-primary:hover {
+        background-color: #c36a82;
+        box-shadow: 0 6px 20px rgba(195, 106, 130, 0.4);
+        transform: translateY(-2px);
+      }
+      .btn-secondary {
+        background-color: transparent;
+        border: 2px solid #d67a93;
+        color: #d67a93;
+        transition: all 0.3s ease;
+      }
+      .btn-secondary:hover {
+        background-color: rgba(214, 122, 147, 0.1);
+        color: #f9a8d4;
+        border-color: #f9a8d4;
+        transform: translateY(-2px);
+      }
+
+      .section-pill {
+        display: inline-block;
+        background-color: rgba(214, 122, 147, 0.15);
+        color: #f9a8d4;
+        padding: 0.25rem 0.75rem;
+        border-radius: 9999px;
+        font-size: 0.875rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+      }
+
+      .feature-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .feature-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2),
+          0 0 15px rgba(214, 122, 147, 0.3);
+      }
+
+      .fade-in-section {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+      }
+      .fade-in-section.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .navbar-blur {
+        background-color: rgba(15, 23, 42, 0.8);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+      }
+
+      /* Light theme specific styles */
+      .light-theme {
+        background-color: #f8fafc;
+        color: #0f172a;
+      }
+      .light-theme .bg-slate-800 {
+        background-color: #e2e8f0 !important;
+      }
+      .light-theme .bg-slate-900:not(.feature-card):not(.navbar-blur) {
+        background-color: #f1f5f9 !important;
+      }
+      .light-theme .feature-card.bg-slate-900 {
+        background-color: #ffffff !important;
+      }
+      .light-theme .text-slate-200,
+      .light-theme .text-slate-300 {
+        color: #475569 !important;
+      }
+      .light-theme .text-slate-400 {
+        color: #64748b !important;
+      }
+      .light-theme .text-slate-500 {
+        color: #94a3b8 !important;
+      }
+      .light-theme .text-white {
+        color: #0f172a !important;
+      }
+      .light-theme .navbar-blur {
+        background-color: rgba(248, 250, 252, 0.8) !important;
+      }
+      .light-theme .section-pill {
+        background-color: rgba(214, 122, 147, 0.25);
+        color: #d67a93;
+      }
+      .light-theme #header a:not(.text-gradient-rose-gold),
+      .light-theme #mobile-menu a {
+        color: #334155 !important;
+      }
+      .light-theme #header a:hover:not(.text-gradient-rose-gold),
+      .light-theme #mobile-menu a:hover {
+        color: #d67a93 !important;
+      }
+      .light-theme #theme-toggle svg,
+      .light-theme #theme-toggle-mobile svg {
+        color: #334155 !important;
+      }
+      .light-theme .btn-secondary {
+        color: #d67a93;
+        border-color: #d67a93;
+      }
+      .light-theme .btn-secondary:hover {
+        background-color: rgba(214, 122, 147, 0.15);
+        color: #c36a82;
+        border-color: #c36a82;
+      }
+      .light-theme footer {
+        background-color: #e2e8f0 !important;
+        border-top-color: #cbd5e1 !important;
+      }
+      .light-theme footer .text-slate-400 {
+        color: #475569 !important;
+      }
+      .light-theme footer .text-sm {
+        color: #64748b !important;
+      }
+
+      /* Cheese Journey Gallery Styles */
+      .cheese-gallery-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 380px; /* Adjusted min-height */
+        position: relative;
+        margin-top: 2rem; /* Add some margin if needed */
+      }
+
+      /* Diamond item styles - seemingly for a different gallery concept, kept as is */
+      .diamond-item {
+        position: absolute;
+        background-size: cover;
+        background-position: center;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+        transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+      }
+
+      .diamond-item:hover {
+        transform: scale(1.1) !important;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+        z-index: 10 !important;
+      }
+      /* End of diamond item styles */
+
+      /* Styles for the image gallery in "Your Journey into Cheese" */
+      .gallery {
+        --size: 100px; /* Base size for images on larger screens */
+        display: grid;
+        grid-template-columns: repeat(6, var(--size));
+        grid-auto-rows: var(--size);
+        gap: 5px;
+        place-items: start center;
+        margin-bottom: var(--size); /* Space below the gallery */
+      }
+
+      .gallery img {
+        width: calc(var(--size) * 2); /* Images are twice the base size */
+        height: calc(var(--size) * 2);
+        object-fit: cover;
+        grid-column: auto / span 2; /* Each image spans 2 grid columns */
+        border-radius: 5px;
+        clip-path: path(
+          "M90,10 C100,0 100,0 110,10 190,90 190,90 190,90 200,100 200,100 190,110 190,110 110,190 110,190 100,200 100,200 90,190 90,190 10,110 10,110 0,100 0,100 10,90Z"
+        );
+        transition: transform 0.3s ease-out, filter 0.3s ease-out;
+      }
+
+      .gallery img:nth-child(5n - 1) {
+        /* Special placement for some images in the grid */
+        grid-column: 2 / span 2;
+      }
+
+      .gallery img:hover {
+        transform: scale(1.05); /* Slight scale on hover */
+        filter: brightness(1.1); /* Slightly brighten on hover */
+      }
+
+      /* Diamond gallery size classes - kept as is */
+      .d-size-lg {
+        width: 12rem;
+        height: 12rem;
+      } /* Approx 192px */
+      .d-size-md {
+        width: 10rem;
+        height: 10rem;
+      } /* Approx 160px */
+      .d-size-sm {
+        width: 8rem;
+        height: 8rem;
+      } /* Approx 128px */
+
+      /* Default positions for diamond gallery - kept as is */
+      .d-pos-center {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1.1);
+        z-index: 3;
+      }
+      .d-pos-tl {
+        top: 25%;
+        left: 30%;
+        transform: translate(-50%, -50%) rotate(-20deg) scale(0.95);
+        z-index: 2;
+      }
+      .d-pos-tr {
+        top: 25%;
+        left: 70%;
+        transform: translate(-50%, -50%) rotate(20deg) scale(0.95);
+        z-index: 2;
+      }
+      .d-pos-bl {
+        top: 70%;
+        left: 35%;
+        transform: translate(-50%, -50%) rotate(15deg) scale(0.9);
+        z-index: 1;
+      }
+      .d-pos-br {
+        top: 70%;
+        left: 65%;
+        transform: translate(-50%, -50%) rotate(-15deg) scale(0.9);
+        z-index: 1;
+      }
+
+      /* Responsive adjustments for the gallery */
+      @media (max-width: 768px) {
+        /* md breakpoint */
+        .cheese-gallery-wrapper {
+          /* General wrapper style for this breakpoint */
+          min-height: 450px;
+        }
+        /* Diamond gallery size adjustments - kept as is */
+        .d-size-lg {
+          width: 10rem;
+          height: 10rem;
+        }
+        .d-size-md {
+          width: 8rem;
+          height: 8rem;
+        }
+        .d-size-sm {
+          width: 7rem;
+          height: 7rem;
+        }
+
+        /* Diamond gallery position adjustments - kept as is */
+        .d-pos-center {
+          top: 50%;
+          transform: translate(-50%, -50%) scale(1);
+        }
+        .d-pos-tl {
+          top: 20%;
+          left: 35%;
+          transform: translate(-50%, -50%) rotate(-15deg) scale(0.9);
+        }
+        .d-pos-tr {
+          top: 20%;
+          left: 65%;
+          transform: translate(-50%, -50%) rotate(15deg) scale(0.9);
+        }
+        .d-pos-bl {
+          top: 75%;
+          left: 40%;
+          transform: translate(-50%, -50%) rotate(10deg) scale(0.85);
+        }
+        .d-pos-br {
+          top: 75%;
+          left: 60%;
+          transform: translate(-50%, -50%) rotate(-10deg) scale(0.85);
+        }
+      }
+
+      @media (max-width: 640px) {
+        /* sm breakpoint */
+        .cheese-gallery-wrapper {
+          /* General rule from user's code, applies to all such wrappers */
+          min-height: 380px;
+        }
+
+        /* Diamond gallery size adjustments - kept as is */
+        .d-size-lg {
+          width: 9rem;
+          height: 9rem;
+        }
+        .d-size-md {
+          width: 7rem;
+          height: 7rem;
+        }
+        .d-size-sm {
+          width: 6rem;
+          height: 6rem;
+        }
+
+        /* Diamond gallery position adjustments (stack them more vertically) - kept as is */
+        .d-pos-center {
+          top: 48%;
+          transform: translate(-50%, -50%) scale(1);
+        }
+        .d-pos-tl {
+          top: 20%;
+          left: 50%;
+          transform: translate(-50%, -50%) rotate(-10deg) scale(0.9);
+        }
+        .d-pos-tr {
+          top: 32%;
+          left: 50%;
+          transform: translate(-50%, -50%) rotate(10deg) scale(0.85);
+        }
+        .d-pos-bl {
+          top: 65%;
+          left: 50%;
+          transform: translate(-50%, -50%) rotate(5deg) scale(0.8);
+        }
+        .d-pos-br {
+          top: 78%;
+          left: 50%;
+          transform: translate(-50%, -50%) rotate(-5deg) scale(0.75);
+        }
+
+        /* START: Styles for the "Your Journey into Cheese" gallery on small screens */
+        #cheese-journey .cheese-gallery-wrapper {
+          min-height: auto; /* Override general rule for this specific gallery to fit content */
+          margin-top: 1.5rem; /* Space between stacked text and the image gallery */
+        }
+
+        #cheese-journey .gallery {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          --size: 150px; /* Increased base size for larger single image */
+          grid-template-columns: unset;
+          grid-auto-rows: unset;
+          gap: 0;
+          place-items: unset;
+          margin-bottom: 0;
+        }
+
+        #cheese-journey .gallery img {
+          grid-column: unset;
+          clip-path: none !important; /* Remove clip-path for the single image */
+        }
+
+        #cheese-journey .gallery img:not(:first-child) {
+          display: none;
+        }
+        /* END: Styles for the "Your Journey into Cheese" gallery */
+      }
+/* Skip link */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #d67a93;
+  color: white;
+  padding: 0.5rem 1rem;
+  z-index: 100;
+  transition: top 0.3s;
+}
+.skip-link:focus {
+  top: 0;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
