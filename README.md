@@ -38,11 +38,9 @@ This royal website was forged with the following noble technologies:
 
 To behold the glory of FromageFront:
 
-1.  **Live Site:** [**FromageFront Live View**](https://jstanoeva.github.io/fromagefront/)
-2.  **Local Viewing:**
-    - Clone this repository: `git clone https://github.com/jstanoeva/fromagefront.git` (Replace `jstanoeva` with your GitHub username if it's different for the repo itself, though the live link uses it.)
-    - Navigate to the project directory: `cd fromagefront`
-    - Open the `index.html` file in your favorite web browser.
+1. Clone this repository: `git clone https://github.com/jstanoeva/fromagefront.git` (Replace `jstanoeva` with your GitHub username if it's different for the repo itself, though the live link uses it.)
+2. Navigate to the project directory: `cd fromagefront`
+3. Open the `index.html` file in your favorite web browser.
 
 ## 💖 A Cheesy Thank You!
 

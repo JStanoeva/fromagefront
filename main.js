@@ -9,7 +9,9 @@ if (mobileMenuButton && mobileMenu) {
 }
 
 // Smooth Scrolling for internal links
-const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const prefersReducedMotion = window.matchMedia(
+  "(prefers-reduced-motion: reduce)"
+).matches;
 
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
@@ -23,10 +25,10 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
       const offsetPosition =
         elementPosition + window.pageYOffset - headerOffset;
 
-  window.scrollTo({
-    top: offsetPosition,
-    behavior: prefersReducedMotion ? "auto" : "smooth",
-  });
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: prefersReducedMotion ? "auto" : "smooth",
+      });
       // Close mobile menu after clicking a link
       if (mobileMenu && !mobileMenu.classList.contains("hidden")) {
         mobileMenu.classList.add("hidden");
@@ -49,17 +51,14 @@ if ("IntersectionObserver" in window) {
     rootMargin: "0px",
     threshold: 0.1, // 10% of the element is visible
   };
-  const observer = new IntersectionObserver(
-    (entries, observerInstance) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("is-visible");
-          // observerInstance.unobserve(entry.target); // Optional: stop observing after animation
-        }
-      });
-    },
-    observerOptions
-  );
+  const observer = new IntersectionObserver((entries, observerInstance) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+        // observerInstance.unobserve(entry.target); // Optional: stop observing after animation
+      }
+    });
+  }, observerOptions);
   sections.forEach((section) => {
     observer.observe(section);
   });
