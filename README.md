@@ -47,3 +47,7 @@ To behold the glory of FromageFront:
 Thank you for visiting the FromageFront repository. May your days be filled with joy, your heart with kindness, and your plate with the finest cheeses!
 
 All hail Queen Tora! Long live the Cheese Republic! 🧀✨
+
+## 📜 License
+
+MIT © [Queen Tora] — Long live the 🧀 **Cheese Republic**.
